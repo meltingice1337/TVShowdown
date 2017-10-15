@@ -76,7 +76,12 @@ namespace TVShowdown
 
         private void MainFrm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = false;
+            e.Cancel = true;
+
+            Reset();
+            Visible = false;
+            coutdownTimer.Stop();
+            triggerManager.Reset();
         }
     }
 }

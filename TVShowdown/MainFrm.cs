@@ -17,7 +17,7 @@ namespace TVShowdown
         public MainFrm()
         {
             InitializeComponent();
-            triggerManager = new TriggerManager(new List<ITrigger> { new MouseTrigger(), new ProcessCPUTrigger("vlc") }, 3);
+            triggerManager = new TriggerManager(new List<ITrigger> { new MouseTrigger(), new ProcessCPUTrigger("vlc") }, Config.IdleMaxSeconds);
             triggerManager.OnTrigger += Tm_OnTrigger;
             Opacity = 0;
             ShowInTaskbar = false;

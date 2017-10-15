@@ -1,0 +1,8 @@
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\bin\Debug\TVShowdown.exe
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\bin\Debug\TVShowdown.pdb
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\obj\Debug\TVShowdown.csprojResolveAssemblyReference.cache
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\obj\Debug\TVShowdown.Properties.Resources.resources
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\obj\Debug\TVShowdown.csproj.GenerateResource.Cache
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\obj\Debug\TVShowdown.exe
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\obj\Debug\TVShowdown.pdb
+c:\users\meltingice\documents\visual studio 2017\Projects\TVShowdown\TVShowdown\obj\Debug\TVShowdown.MainFrm.resources

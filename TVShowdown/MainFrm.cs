@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -56,7 +57,7 @@ namespace TVShowdown
 
         private void coutdownTimer_Tick(object sender, EventArgs e)
         {
-            if(currentSeconds-- <= 0)
+            if (currentSeconds-- <= 0)
             {
                 ShutdownHelper.Shutdown();
             }
@@ -76,7 +77,8 @@ namespace TVShowdown
 
         private void MainFrm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
+            if (e.CloseReason == CloseReason.UserClosing)
+                e.Cancel = true;
 
             Reset();
             Visible = false;

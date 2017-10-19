@@ -57,6 +57,7 @@ namespace TVShowdown
 
         private void coutdownTimer_Tick(object sender, EventArgs e)
         {
+            Win32.ForceFocus(Handle);
             if (currentSeconds-- <= 0)
             {
                 ShutdownHelper.Shutdown();

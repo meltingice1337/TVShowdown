@@ -54,5 +54,33 @@ namespace TVShowdown
 
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        [DllImport("user32.dll")]
+        public static extern bool BringWindowToTop(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        public static extern bool AttachThreadInput(uint idAttach, uint idAttachTo, bool fAttach);
+
+        [DllImport("user32.dll")]
+        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, IntPtr lpdwProcessId);
+
+        [DllImport("Kernel32.dll")]
+        public static extern uint GetCurrentThreadId();
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr GetForegroundWindow();
+
+        public static void ForceFocus(IntPtr handle)
+        {
+            var fThread = GetWindowThreadProcessId(GetForegroundWindow(), IntPtr.Zero);
+            var cThread = GetCurrentThreadId();
+            if (fThread != cThread)
+            {
+                AttachThreadInput(fThread, cThread, true);
+                BringWindowToTop(handle);
+                AttachThreadInput(fThread, cThread, false);
+            }
+            else BringWindowToTop(handle);
+        }
     }
 }
